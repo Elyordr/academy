@@ -47,7 +47,7 @@ def test_get_session_id():
 
     with allure.step('Получение session_id из куки'):
         cookie = response.cookies.get_dict()['cart']
-        assert isinstance(cookie, int), f'Тип куки на самом деле {type(cookie)}'
+        assert isinstance(cookie, str), f'Тип куки на самом деле {type(cookie)}'
 
 
 @allure.parent_suite('Главная страница')
